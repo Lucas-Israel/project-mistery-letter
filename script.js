@@ -5,6 +5,8 @@ const estilo = ['newspaper', 'magazine1', 'magazine2'];
 const tamanho = ['medium', 'big', 'reallybig'];
 const rotacao = ['rotateleft', 'rotateright'];
 const inclinacao = ['skewleft', 'skewright'];
+const contador = document.querySelector('#carta-contador');
+const numPCriad = document.getElementsByTagName('span');
 
 function checkSpan() {
   const elem = document.querySelectorAll('span');
@@ -33,6 +35,14 @@ btnCriarCarta.addEventListener('click', () => {
       crndSpn.innerText = usingSplit[index2];
       crndSpn.classList.add(rnGzus(estilo), rnGzus(tamanho), rnGzus(rotacao), rnGzus(inclinacao));
       paragCartaGerada.appendChild(crndSpn);
+      contador.innerText = numPCriad.length;
     }
   }
+});
+
+paragCartaGerada.addEventListener('click', (event) => {
+  const evento = event;
+  evento.target.className = 'a';
+  evento.target.classList.remove('a');
+  evento.target.classList.add(rnGzus(estilo), rnGzus(tamanho), rnGzus(rotacao), rnGzus(inclinacao));
 });

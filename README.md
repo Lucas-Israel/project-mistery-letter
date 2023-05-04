@@ -29,7 +29,6 @@ script.js
 ```
 git clone https://github.com/Lucas-Israel/project-mistery-letter
 npm install
-npm test
 rodar index.html
 ```
 
